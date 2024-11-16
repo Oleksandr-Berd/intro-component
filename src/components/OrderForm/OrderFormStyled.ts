@@ -148,9 +148,19 @@ export const SubmitButton = styled.button`
     0 0 20px 2px rgba(255, 117, 140, 0.5),
     inset 0 0 15px 5px rgba(255, 255, 255, 0.3);
 
-    @media (min-width: 1220px){
-        margin-top: 42px;
+  @media (min-width: 1220px) {
+    margin-top: 42px;
+    transition: background-color 1s linear;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: #77e2b3;
+      cursor: pointer;
+
+      transition: background-color 1s linear;
     }
+  }
 `;
 
 export const Terms = styled.div`
