@@ -21,7 +21,7 @@ const OrderForm: React.FC<IProps> = ({ handleSubmit }) => {
           }}
           validationSchema={validSchema}
           onSubmit={(values, { setSubmitting }) => {
-            handleSubmit(values); 
+            handleSubmit(values);
             setSubmitting(false);
           }}
         >
@@ -59,25 +59,25 @@ const OrderForm: React.FC<IProps> = ({ handleSubmit }) => {
                   className="error"
                 />
               </SC.InputCon>
-              <button type="submit" disabled={isSubmitting}>
+              <SC.SubmitButton type="submit" disabled={isSubmitting}>
                 Claim your free trial
-              </button>
+              </SC.SubmitButton>
+              <SC.Terms>
+                <p>
+                  By clicking the button, you are agreeing to our{" "}
+                  <a
+                    href="https://www.linkedin.com/in/oleksandr-berdychevskyi-83336761/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Terms and Services
+                  </a>
+                </p>
+              </SC.Terms>
             </Form>
           )}
         </Formik>
       </SC.FormCon>
-      <div>
-        <p>
-          By clicking the button, you are agreeing to our{" "}
-          <a
-            href="https://www.linkedin.com/in/oleksandr-berdychevskyi-83336761/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Terms and Services
-          </a>
-        </p>
-      </div>
     </div>
   );
 };
