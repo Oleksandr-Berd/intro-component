@@ -2,6 +2,8 @@ import { validSchema } from "../../utils/validationShema";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as SC from "./OrderFormStyled";
 import { IProps } from "../../utils/interfaces";
+import {ReactComponent as ErrorIcon} from "../../assets/images/error.svg"
+
 
 const OrderForm: React.FC<IProps> = ({ handleSubmit }) => {
   return (
@@ -30,6 +32,9 @@ const OrderForm: React.FC<IProps> = ({ handleSubmit }) => {
               <SC.InputCon>
                 <label>First Name</label>
                 <Field type="text" name="firstName" />
+                <ErrorMessage name="firstName" className="errorIcon">
+                  {(msg) => msg && <ErrorIcon className="error-icon" />}
+                </ErrorMessage>
                 <ErrorMessage
                   name="firstName"
                   component="div"
@@ -39,8 +44,11 @@ const OrderForm: React.FC<IProps> = ({ handleSubmit }) => {
               <SC.InputCon>
                 <label>Last Name</label>
                 <Field type="text" name="lastName" />
+                <ErrorMessage name="lastName" className="errorIcon">
+                  {(msg) => msg && <ErrorIcon className="error-icon" />}
+                </ErrorMessage>
                 <ErrorMessage
-                  name="secondName"
+                  name="lastName"
                   component="div"
                   className="error"
                 />
@@ -48,11 +56,17 @@ const OrderForm: React.FC<IProps> = ({ handleSubmit }) => {
               <SC.InputCon>
                 <label>Email</label>
                 <Field type="email" name="email" />
+                <ErrorMessage name="email" className="errorIcon">
+                  {(msg) => msg && <ErrorIcon className="error-icon" />}
+                </ErrorMessage>
                 <ErrorMessage name="email" component="div" className="error" />
               </SC.InputCon>
               <SC.InputCon>
                 <label>Password</label>
                 <Field type="password" name="password" />
+                <ErrorMessage name="password" className="errorIcon">
+                  {(msg) => msg && <ErrorIcon className="error-icon" />}
+                </ErrorMessage>
                 <ErrorMessage
                   name="password"
                   component="div"

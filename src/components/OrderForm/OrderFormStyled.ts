@@ -1,7 +1,5 @@
-import { Field } from "formik";
 import styled from "styled-components";
 
-export const OrderCon = styled.div``;
 
 export const OrderContent = styled.div`
   text-align: center;
@@ -52,6 +50,10 @@ export const InputCon = styled.div`
   position: relative;
   &:not(:last-child) {
     margin-bottom: 16px;
+
+    @media (min-width: 1220px) {
+      margin-bottom: 20px;
+    }
   }
 
   & label {
@@ -69,6 +71,10 @@ export const InputCon = styled.div`
     letter-spacing: 0.25px;
 
     color: #3d3b48;
+
+    @media (min-width: 1220px) {
+      transform: translate(32px, 15px);
+    }
   }
 
   & input:focus,
@@ -84,15 +90,36 @@ export const InputCon = styled.div`
 
     border: 1px solid #3d3b48;
     border-radius: 5px;
+
+    @media (min-width: 1220px) {
+      padding-left: 32px;
+    }
   }
 
   &:focus-within label {
     transform: translate(19px, -18px);
+    @media (min-width: 1220px) {
+      transform: translate(32px, -18px);
+    }
   }
 
   .error {
     color: red;
     font-size: 14px;
+    font-style: italic;
+    @media (min-width: 1220px){
+        text-align: right;
+
+        margin-top: 6px;
+    }
+  }
+
+  .error-icon{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    transform: translate(-27px, 14px);
   }
 `;
 
@@ -120,6 +147,10 @@ export const SubmitButton = styled.button`
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06),
     0 0 20px 2px rgba(255, 117, 140, 0.5),
     inset 0 0 15px 5px rgba(255, 255, 255, 0.3);
+
+    @media (min-width: 1220px){
+        margin-top: 42px;
+    }
 `;
 
 export const Terms = styled.div`
